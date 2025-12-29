@@ -4,7 +4,7 @@ title: 'Mengenal Bambu Hitam (Wulung): Eksotis dan Mewah'
 pubDate: 2025-11-20
 description: 'Apa bedanya bambu hitam dan bambu biasa? Mengapa harganya sedikit lebih mahal? Simak penjelasannya di sini.'
 author: 'Admin BambuBos'
-image: '/images/kursi.jpeg'
+image: '/bambubos/images/kursi.jpeg'
 ---
 
 Saat memesan furniture atau saung di **BambuBos**, seringkali kami menawarkan opsi: *"Mau pakai bambu biasa (apus/petung) atau bambu hitam (wulung)?"*

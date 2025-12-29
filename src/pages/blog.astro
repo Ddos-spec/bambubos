@@ -14,7 +14,7 @@ const posts = Object.values(import.meta.glob('./blog/*.md', { eager: true }));
       {posts.map(post => (
         <a href={post.url} class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition group">
           <div class="h-48 bg-gray-300 relative overflow-hidden">
-             <img src={post.frontmatter.image || '/images/blog-default.jpg'} alt={post.frontmatter.title} class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+             <img src={post.frontmatter.image || '/bambubos/images/logo.jpg'} alt={post.frontmatter.title} class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
           </div>
           <div class="p-6">
             <h2 class="text-xl font-bold mb-2 text-emerald-900">{post.frontmatter.title}</h2>

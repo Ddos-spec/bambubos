@@ -9,7 +9,7 @@ import Layout from '../layouts/Layout.astro';
 // Solusi terbaik: Kita generate array berdasarkan asumsi jumlah file yang tadi kita proses (sekitar 40 file).
 
 const totalImages = 40; // Estimasi dari jumlah file WhatsApp tadi
-const images = Array.from({ length: totalImages }, (_, i) => `/images/galeri-${i + 1}.jpg`);
+const images = Array.from({ length: totalImages }, (_, i) => `/bambubos/bambubos/images/galeri-${i + 1}.jpg`);
 ---
 
 <Layout title="Galeri Proyek BambuBos">
@@ -24,16 +24,16 @@ const images = Array.from({ length: totalImages }, (_, i) => `/images/galeri-${i
       
       <!-- Menampilkan foto-foto spesifik dulu -->
       <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group">
-        <img src="/images/saung.jpeg" alt="Proyek Saung" class="w-full h-auto hover:scale-105 transition duration-500" loading="lazy" />
+        <img src="/bambubos/images/saung.jpeg" alt="Proyek Saung" class="w-full h-auto hover:scale-105 transition duration-500" loading="lazy" />
       </div>
       <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group">
-        <img src="/images/kursi.jpeg" alt="Proyek Kursi" class="w-full h-auto hover:scale-105 transition duration-500" loading="lazy" />
+        <img src="/bambubos/images/kursi.jpeg" alt="Proyek Kursi" class="w-full h-auto hover:scale-105 transition duration-500" loading="lazy" />
       </div>
        <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group">
-        <img src="/images/saung1.jpeg" alt="Proyek Saung 1" class="w-full h-auto hover:scale-105 transition duration-500" loading="lazy" />
+        <img src="/bambubos/images/saung1.jpeg" alt="Proyek Saung 1" class="w-full h-auto hover:scale-105 transition duration-500" loading="lazy" />
       </div>
        <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group">
-        <img src="/images/kursi2.jpeg" alt="Proyek Kursi 2" class="w-full h-auto hover:scale-105 transition duration-500" loading="lazy" />
+        <img src="/bambubos/images/kursi2.jpeg" alt="Proyek Kursi 2" class="w-full h-auto hover:scale-105 transition duration-500" loading="lazy" />
       </div>
 
       <!-- Loop sisa gambar galeri -->

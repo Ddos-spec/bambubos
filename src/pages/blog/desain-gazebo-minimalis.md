@@ -4,7 +4,7 @@ title: 'Inspirasi Gazebo Bambu untuk Taman Rumah Minimalis'
 pubDate: 2025-11-10
 description: 'Punya sisa lahan sempit? Ubah menjadi area santai estetik dengan pilihan desain saung bambu mungil ini.'
 author: 'Tim Desain BambuBos'
-image: '/images/saung.jpeg'
+image: '/bambubos/images/saung.jpeg'
 ---
 
 Memiliki lahan terbatas bukan alasan untuk tidak punya tempat santai yang asri. Gazebo bambu justru sangat cocok untuk taman mungil karena strukturnya yang terlihat "ringan" dan tidak memblokir pandangan seperti bangunan beton.
