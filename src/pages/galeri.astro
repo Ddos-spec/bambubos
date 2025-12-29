@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Mengambil semua file gambar di public/images yang berawalan 'galeri-'
+// Karena ini di public, kita harus list manual atau pakai glob tapi menunjuk ke URL public.
+// Di Astro, cara termudah untuk folder public adalah manual list atau asumsi jumlah.
+// Tapi kita akan gunakan import.meta.glob untuk mendeteksi file 'galeri-*.jpg' jika kita pindahkan ke src/assets, 
+// NAMUN karena user menaruh di public, kita akan pakai script client-side atau hardcode loop.
+// Solusi terbaik: Kita generate array berdasarkan asumsi jumlah file yang tadi kita proses (sekitar 40 file).
+
+const totalImages = 40; // Estimasi dari jumlah file WhatsApp tadi
+const images = Array.from({ length: totalImages }, (_, i) => `/images/galeri-${i + 1}.jpg`);
+---
+
+<Layout title="Galeri Proyek BambuBos">
+  <section class="bg-stone-900 text-white py-20 px-4 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold font-serif mb-4">Galeri Proyek</h1>
+    <p class="text-xl text-stone-300 max-w-2xl mx-auto">Dokumentasi hasil pengerjaan Saung, Gazebo, dan Konstruksi Bambu kami.</p>
+  </section>
+
+  <section class="container mx-auto px-4 py-16">
+    <!-- Grid Masonry-like -->
+    <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+      
+      <!-- Menampilkan foto-foto spesifik dulu -->
+      <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group">
+        <img src="/images/saung.jpeg" alt="Proyek Saung" class="w-full h-auto hover:scale-105 transition duration-500" loading="lazy" />
+      </div>
+      <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group">
+        <img src="/images/kursi.jpeg" alt="Proyek Kursi" class="w-full h-auto hover:scale-105 transition duration-500" loading="lazy" />
+      </div>
+       <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group">
+        <img src="/images/saung1.jpeg" alt="Proyek Saung 1" class="w-full h-auto hover:scale-105 transition duration-500" loading="lazy" />
+      </div>
+       <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group">
+        <img src="/images/kursi2.jpeg" alt="Proyek Kursi 2" class="w-full h-auto hover:scale-105 transition duration-500" loading="lazy" />
+      </div>
+
+      <!-- Loop sisa gambar galeri -->
+      {images.map((img) => (
+        <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group bg-stone-100">
+          <img 
+            src={img} 
+            alt="Dokumentasi Proyek BambuBos" 
+            class="w-full h-auto hover:scale-105 transition duration-500" 
+            loading="lazy"
+            onerror="this.style.display='none'" 
+          />
+        </div>
+      ))}
+
+    </div>
+  </section>
+</Layout>
