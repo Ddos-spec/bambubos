@@ -35,11 +35,11 @@ try {
     <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
       
       {images.map((img) => (
-        <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group bg-stone-100 mb-8">
+        <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group bg-stone-100 mb-8 cursor-pointer">
           <img 
             src={img} 
             alt="Dokumentasi Proyek BambuBos" 
-            class="w-full h-auto hover:scale-105 transition duration-500" 
+            class="gallery-img w-full h-auto hover:scale-105 transition duration-500" 
             loading="lazy"
             onerror="this.style.display='none'" 
           />
@@ -48,4 +48,41 @@ try {
 
     </div>
   </section>
+
+  <!-- Lightbox Modal (Zoom) -->
+  <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden items-center justify-center p-4 cursor-zoom-out transition-all duration-300 opacity-0">
+      <img id="lightbox-img" src="" alt="Zoom Preview" class="max-h-[90vh] max-w-[95vw] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300" />
+      <button class="absolute top-6 right-6 text-white/80 hover:text-white text-5xl font-bold leading-none">&times;</button>
+  </div>
+
+  <script>
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const images = document.querySelectorAll('.gallery-img');
+
+      // Buka Lightbox
+      images.forEach(img => {
+          img.addEventListener('click', (e) => {
+              const src = e.target.getAttribute('src');
+              if (lightbox && lightboxImg) {
+                  lightboxImg.setAttribute('src', src);
+                  lightbox.classList.remove('hidden');
+                  // Timeout biar animasi fade-in jalan
+                  setTimeout(() => {
+                      lightbox.classList.remove('opacity-0');
+                      lightboxImg.classList.remove('scale-95');
+                  }, 10);
+              }
+          });
+      });
+
+      // Tutup Lightbox
+      lightbox?.addEventListener('click', () => {
+          lightbox.classList.add('opacity-0');
+          lightboxImg?.classList.add('scale-95');
+          setTimeout(() => {
+              lightbox.classList.add('hidden');
+          }, 300);
+      });
+  </script>
 </Layout>
