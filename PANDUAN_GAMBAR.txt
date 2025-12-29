@@ -1,0 +1,26 @@
+PANDUAN MENGGANTI FOTO
+======================
+
+Silakan letakkan foto-foto Anda di dalam folder:
+public/images/
+
+Berikut adalah daftar file yang perlu Anda siapkan/ganti (pastikan nama file sama atau ubah di kode):
+
+1. Background Halaman Utama:
+   - File: public/images/hero.jpg
+   - Ukuran rekomendasi: 1920x1080px (Landscape)
+
+2. Foto Produk (Halaman Utama):
+   - Saung: public/images/saung.jpg
+   - Kursi/Furniture: public/images/kursi.jpg
+   - Pagar/Dekorasi: public/images/pagar.jpg
+   - Ukuran rekomendasi: 600x400px
+
+3. Foto Blog:
+   - Default: public/images/blog-default.jpg
+   - Artikel 1: public/images/blog-1.jpg
+   - Ukuran rekomendasi: 800x600px
+
+Tips:
+- Gunakan format JPG atau WEBP untuk ukuran file yang lebih kecil.
+- Nama file bisa diubah sesuai keinginan, tapi jangan lupa ubah juga di file .astro atau .md yang bersangkutan.

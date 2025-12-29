@@ -1,0 +1,188 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Jasa Pembuatan Saung & Gazebo Bambu Tangerang Selatan">
+  
+  <!-- Hero Section -->
+  <section class="relative min-h-[75vh] flex items-center bg-stone-900 text-white overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40 z-10"></div>
+    <img src="/images/hero.jpg" alt="Konstruksi Saung Bambu Mewah" class="absolute inset-0 w-full h-full object-cover opacity-60" />
+    
+    <div class="container mx-auto px-4 relative z-20 pt-16">
+      <div class="max-w-3xl">
+        <span class="bg-bamboo-DEFAULT text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider mb-4 inline-block">Spesialis Bambu Tangerang Selatan</span>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold font-serif mb-6 leading-tight">
+          Hadirkan Nuansa Alami <br/>
+          <span class="text-bamboo-DEFAULT">Dengan Sentuhan Bambu</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-10 text-stone-200 max-w-2xl leading-relaxed">
+          Jasa borongan pembuatan Saung, Gazebo, Vila, dan Resto dengan kualitas terbaik. Pengerjaan rapi, kokoh, dan estetik.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://wa.me/6281574710511?text=Halo%20BambuBos,%20saya%20ingin%20konsultasi%20pembuatan..." class="bg-bamboo-DEFAULT text-white border-2 border-bamboo-DEFAULT hover:bg-green-700 hover:border-green-700 px-8 py-4 rounded-full font-bold transition shadow-lg text-center flex items-center justify-center gap-2">
+            <span>💬</span> Konsultasi Gratis
+          </a>
+          <a href="#layanan" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-stone-900 px-8 py-4 rounded-full font-bold transition text-center">
+            Lihat Layanan
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Bar -->
+  <div class="bg-bamboo-dark text-white py-6 relative z-30 shadow-lg -mt-2">
+      <div class="container mx-auto px-4 flex flex-wrap justify-center md:justify-between items-center gap-4 text-center md:text-left">
+          <div class="flex items-center gap-3">
+              <span class="text-2xl">📍</span>
+              <div>
+                  <p class="font-bold text-sm text-stone-300">Lokasi Workshop</p>
+                  <p class="font-bold">Pondok Aren, Tangerang Selatan</p>
+              </div>
+          </div>
+           <div class="flex items-center gap-3">
+              <span class="text-2xl">🕒</span>
+              <div>
+                  <p class="font-bold text-sm text-stone-300">Jam Operasional</p>
+                  <p class="font-bold">08.00 – 16.30 WIB</p>
+              </div>
+          </div>
+           <div class="flex items-center gap-3">
+              <span class="text-2xl">📞</span>
+              <div>
+                  <p class="font-bold text-sm text-stone-300">Telepon / WA</p>
+                  <p class="font-bold">0815-7471-0511</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Services / Layanan -->
+  <section id="layanan" class="py-20 px-4 container mx-auto">
+    <div class="text-center mb-16">
+        <h2 class="text-bamboo-dark font-bold uppercase tracking-widest text-sm mb-2">Layanan Kami</h2>
+        <h3 class="text-4xl font-bold text-stone-800 font-serif">Apa yang Kami Bangun?</h3>
+        <div class="w-24 h-1 bg-bamboo-DEFAULT mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:-translate-y-2 transition duration-300 border border-stone-100">
+        <div class="h-64 bg-gray-200 relative">
+            <img src="/images/saung.jpg" alt="Pembuatan Saung Bambu" class="w-full h-full object-cover" />
+            <div class="absolute bottom-0 left-0 bg-bamboo-dark text-white px-4 py-1 rounded-tr-lg font-bold">Terlaris</div>
+        </div>
+        <div class="p-8">
+            <h4 class="text-2xl font-bold mb-3 text-stone-800">Saung & Gazebo</h4>
+            <p class="text-stone-600 mb-6">Tempat bersantai yang sejuk untuk taman rumah atau area publik. Tersedia berbagai ukuran dan model atap (ijuk/alang-alang/genteng).</p>
+            <a href="https://wa.me/6281574710511?text=Saya%20tertarik%20dengan%20Saung" class="text-bamboo-dark font-bold hover:text-bamboo-DEFAULT flex items-center gap-2">Pesan Sekarang <span>&rarr;</span></a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:-translate-y-2 transition duration-300 border border-stone-100">
+        <div class="h-64 bg-gray-200 relative">
+            <img src="/images/kursi.jpg" alt="Vila dan Homestay Bambu" class="w-full h-full object-cover" />
+        </div>
+        <div class="p-8">
+            <h4 class="text-2xl font-bold mb-3 text-stone-800">Vila & Homestay</h4>
+            <p class="text-stone-600 mb-6">Konstruksi bangunan bambu skala besar untuk penginapan dengan nuansa alam yang kuat dan estetik.</p>
+            <a href="https://wa.me/6281574710511?text=Saya%20tertarik%20dengan%20Vila%20Bambu" class="text-bamboo-dark font-bold hover:text-bamboo-DEFAULT flex items-center gap-2">Konsultasi Proyek <span>&rarr;</span></a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:-translate-y-2 transition duration-300 border border-stone-100">
+        <div class="h-64 bg-gray-200 relative">
+            <img src="/images/pagar.jpg" alt="Resto dan Lesehan" class="w-full h-full object-cover" />
+        </div>
+        <div class="p-8">
+            <h4 class="text-2xl font-bold mb-3 text-stone-800">Resto & Lesehan</h4>
+            <p class="text-stone-600 mb-6">Desain area makan konsep lesehan atau restoran bambu yang nyaman, luas, dan menarik pelanggan.</p>
+            <a href="https://wa.me/6281574710511?text=Saya%20tertarik%20dengan%20Resto%20Bambu" class="text-bamboo-dark font-bold hover:text-bamboo-DEFAULT flex items-center gap-2">Mulai Diskusi <span>&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us Section -->
+  <section class="py-20 bg-stone-100">
+      <div class="container mx-auto px-4">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                  <h2 class="text-3xl md:text-4xl font-bold font-serif text-stone-800 mb-6">Mengapa Memilih BambuBos?</h2>
+                  <div class="space-y-6">
+                      <div class="flex gap-4">
+                          <div class="w-12 h-12 bg-bamboo-light rounded-full flex items-center justify-center text-bamboo-dark font-bold text-xl shrink-0">1</div>
+                          <div>
+                              <h4 class="text-xl font-bold text-stone-800">Bahan Berkualitas</h4>
+                              <p class="text-stone-600">Kami hanya menggunakan bambu pilihan yang sudah melalui proses pengawetan agar tahan lama dan anti rayap.</p>
+                          </div>
+                      </div>
+                      <div class="flex gap-4">
+                          <div class="w-12 h-12 bg-bamboo-light rounded-full flex items-center justify-center text-bamboo-dark font-bold text-xl shrink-0">2</div>
+                          <div>
+                              <h4 class="text-xl font-bold text-stone-800">Tenaga Ahli Berpengalaman</h4>
+                              <p class="text-stone-600">Dikerjakan oleh pengrajin yang telah puluhan tahun berkarya dalam konstruksi bambu.</p>
+                          </div>
+                      </div>
+                      <div class="flex gap-4">
+                          <div class="w-12 h-12 bg-bamboo-light rounded-full flex items-center justify-center text-bamboo-dark font-bold text-xl shrink-0">3</div>
+                          <div>
+                              <h4 class="text-xl font-bold text-stone-800">Harga Borongan Bersaing</h4>
+                              <p class="text-stone-600">Kami menawarkan sistem borongan dengan harga yang transparan dan kompetitif di pasaran.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="relative">
+                  <div class="absolute -inset-4 bg-bamboo-DEFAULT/20 rounded-full blur-2xl"></div>
+                  <img src="/images/hero.jpg" alt="Kualitas Bambu Terbaik" class="relative rounded-lg shadow-2xl rotate-2 hover:rotate-0 transition duration-500" />
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Location / Map Section -->
+  <section class="py-20 px-4 container mx-auto text-center">
+      <h2 class="text-3xl font-bold font-serif text-stone-800 mb-8">Kunjungi Workshop Kami</h2>
+      <p class="text-lg text-stone-600 mb-8 max-w-2xl mx-auto">
+          Ingin melihat langsung kualitas pekerjaan kami atau berdiskusi tatap muka? Silakan datang ke lokasi kami.
+      </p>
+      
+      <div class="bg-white p-4 rounded-xl shadow-lg inline-block w-full max-w-4xl border border-stone-200">
+          <!-- Embed Google Maps Placeholder (Using an iframe generator approach for the real address) -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.059434685337!2d106.6991123!3d-6.2559024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fa867431267d%3A0x6734731835560126!2sJl.%20Titihan%201%2C%20Parigi%2C%20Kec.%20Pd.%20Aren%2C%20Kota%20Tangerang%20Selatan%2C%20Banten!5e0!3m2!1sen!2sid!4v1703844000000!5m2!1sen!2sid" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            class="rounded-lg"
+          ></iframe>
+          <div class="mt-4 flex flex-col md:flex-row justify-between items-center text-left p-4 bg-stone-50 rounded-lg">
+              <div>
+                  <h4 class="font-bold text-stone-800">BambuBos Workshop</h4>
+                  <p class="text-stone-600 text-sm">Jl. Titihan 1 No.1, Parigi, Pondok Aren, Tangsel</p>
+              </div>
+              <a href="https://maps.google.com/?q=Jl.+Titihan+1+No.1,+Parigi,+Kec.+Pd.+Aren,+Kota+Tangerang+Selatan,+Banten+15227" target="_blank" class="mt-4 md:mt-0 bg-white border border-stone-300 text-stone-700 px-4 py-2 rounded shadow hover:bg-stone-100 transition text-sm font-bold flex items-center gap-2">
+                  <span>🗺️</span> Buka di Google Maps
+              </a>
+          </div>
+      </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-bamboo-dark text-white py-16 text-center px-4">
+      <h2 class="text-3xl md:text-5xl font-bold font-serif mb-6">Wujudkan Bangunan Impian Anda</h2>
+      <p class="text-xl text-stone-200 mb-8 max-w-2xl mx-auto">Konsultasikan kebutuhan saung, gazebo, atau konstruksi bambu Anda sekarang. Gratis survei dan konsultasi!</p>
+      <a href="https://wa.me/6281574710511?text=Halo%20BambuBos,%20saya%20mau%20tanya%20harga..." class="bg-white text-green-800 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-stone-100 hover:scale-105 transition duration-300 inline-block">
+          Hubungi Kami via WhatsApp
+      </a>
+  </section>
+
+</Layout>

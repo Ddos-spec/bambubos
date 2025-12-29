@@ -1,0 +1,38 @@
+---
+---
+<nav class="bg-bamboo-dark text-white p-4 sticky top-0 z-40 shadow-xl border-b-4 border-bamboo-DEFAULT">
+  <div class="container mx-auto flex justify-between items-center">
+    <a href="/" class="text-2xl md:text-3xl font-bold font-serif tracking-wide flex items-center gap-2">
+      <span>🎋</span> BambuBos
+    </a>
+    <div class="hidden md:flex space-x-8 items-center">
+      <a href="/" class="hover:text-bamboo-light transition font-medium tracking-wide">Beranda</a>
+      <a href="#layanan" class="hover:text-bamboo-light transition font-medium tracking-wide">Layanan</a>
+      <a href="/blog" class="hover:text-bamboo-light transition font-medium tracking-wide">Blog</a>
+      <a href="#kontak" class="hover:text-bamboo-light transition font-medium tracking-wide">Kontak</a>
+    </div>
+    <!-- Mobile Menu Button (Hamburger) -->
+    <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+  
+  <!-- Mobile Menu (Hidden by default) -->
+  <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-bamboo-dark border-t border-emerald-800 shadow-lg flex flex-col p-4 space-y-4">
+      <a href="/" class="block hover:text-bamboo-light transition font-medium">Beranda</a>
+      <a href="#layanan" class="block hover:text-bamboo-light transition font-medium">Layanan</a>
+      <a href="/blog" class="block hover:text-bamboo-light transition font-medium">Blog</a>
+      <a href="#kontak" class="block hover:text-bamboo-light transition font-medium">Kontak</a>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>
