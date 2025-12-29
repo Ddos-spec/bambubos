@@ -1,15 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// Mengambil semua file gambar di public/images yang berawalan 'galeri-'
-// Karena ini di public, kita harus list manual atau pakai glob tapi menunjuk ke URL public.
-// Di Astro, cara termudah untuk folder public adalah manual list atau asumsi jumlah.
-// Tapi kita akan gunakan import.meta.glob untuk mendeteksi file 'galeri-*.jpg' jika kita pindahkan ke src/assets, 
-// NAMUN karena user menaruh di public, kita akan pakai script client-side atau hardcode loop.
-// Solusi terbaik: Kita generate array berdasarkan asumsi jumlah file yang tadi kita proses (sekitar 40 file).
+// Mengambil semua file gambar jpg/jpeg di folder public/images
+// import.meta.glob biasanya untuk src, tapi kita bisa akali dengan listing manual atau glob aset.
+// Di Astro untuk public folder, kita tidak bisa pakai glob server-side standar untuk listing file public di build time dengan mudah tanpa fs.
+// TAPI, kita bisa pakai fs (Node.js) karena ini SSG (Static Site Generation).
 
-const totalImages = 40; // Estimasi dari jumlah file WhatsApp tadi
-const images = Array.from({ length: totalImages }, (_, i) => `/bambubos/bambubos/images/galeri-${i + 1}.jpg`);
+import fs from 'node:fs';
+import path from 'node:path';
+
+const imagesDir = path.join(process.cwd(), 'public/images');
+let images = [];
+
+try {
+  const files = fs.readdirSync(imagesDir);
+  images = files
+    .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file)) // Hanya ambil gambar
+    .filter(file => !file.startsWith('logo')) // Jangan masukkan logo ke galeri
+    .filter(file => !file.startsWith('hero')) // Jangan masukkan hero
+    .map(file => `/bambubos/images/${file}`); // Tambahkan prefix path
+} catch (e) {
+  console.error("Gagal membaca folder images", e);
+}
 ---
 
 <Layout title="Galeri Proyek BambuBos">
@@ -22,23 +34,8 @@ const images = Array.from({ length: totalImages }, (_, i) => `/bambubos/bambubos
     <!-- Grid Masonry-like -->
     <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
       
-      <!-- Menampilkan foto-foto spesifik dulu -->
-      <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group">
-        <img src="/bambubos/images/saung.jpeg" alt="Proyek Saung" class="w-full h-auto hover:scale-105 transition duration-500" loading="lazy" />
-      </div>
-      <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group">
-        <img src="/bambubos/images/kursi.jpeg" alt="Proyek Kursi" class="w-full h-auto hover:scale-105 transition duration-500" loading="lazy" />
-      </div>
-       <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group">
-        <img src="/bambubos/images/saung1.jpeg" alt="Proyek Saung 1" class="w-full h-auto hover:scale-105 transition duration-500" loading="lazy" />
-      </div>
-       <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group">
-        <img src="/bambubos/images/kursi2.jpeg" alt="Proyek Kursi 2" class="w-full h-auto hover:scale-105 transition duration-500" loading="lazy" />
-      </div>
-
-      <!-- Loop sisa gambar galeri -->
       {images.map((img) => (
-        <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group bg-stone-100">
+        <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group bg-stone-100 mb-8">
           <img 
             src={img} 
             alt="Dokumentasi Proyek BambuBos" 

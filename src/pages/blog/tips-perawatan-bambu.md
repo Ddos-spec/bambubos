@@ -4,7 +4,7 @@ title: '7 Cara Merawat Saung & Furniture Bambu Agar Tahan Puluhan Tahun'
 pubDate: 2025-11-01
 description: 'Jangan biarkan bambu lapuk! Ikuti panduan praktis perawatan bambu ini agar aset Anda tetap kokoh dan mengkilap.'
 author: 'BambuBos Expert'
-image: '/bambubos/images/galeri-5.jpg'
+image: '/bambubos/images/rumah-bambu-atap-genteng-1.jpg'
 ---
 
 Bambu dikenal sebagai material yang kuat, namun seperti kayu, ia membutuhkan sentuhan kasih sayang agar tetap awet. Banyak klien **BambuBos** bertanya, *"Apakah bambu bisa tahan hujan dan panas?"* Jawabannya: **Bisa, asal dirawat dengan benar.**

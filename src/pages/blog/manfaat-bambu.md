@@ -4,7 +4,7 @@ title: '5 Manfaat Bambu untuk Hunian Modern'
 pubDate: 2025-10-15
 description: 'Temukan mengapa bambu menjadi pilihan favorit arsitek dan desainer interior masa kini.'
 author: 'Admin BambuBos'
-image: '/bambubos/images/galeri-10.jpg'
+image: '/bambubos/images/rumah-bambu-atap-jerami-1.jpg'
 ---
 
 Bambu bukan lagi sekadar bahan bangunan tradisional. Kini, bambu telah bertransformasi menjadi elemen **estetik** dan **fungsional** dalam desain hunian modern.
